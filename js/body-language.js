@@ -278,7 +278,5 @@
                     }
                 }
             }
-
-            bl.piece('credits');
         });
 })(jQuery); // End of use strict
