@@ -1,0 +1,111 @@
+@font-family: "Reenie Beanie", "Linux Libertine", "Georgia", "Times New Roman", "Times", "serif";
+
+.credits {
+  color: white;
+}
+
+html, body, .page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+}
+
+/*.page-comic,*/
+.page {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; /* establish flex container */
+  flex-direction: column; /* make main axis vertical */
+  justify-content: center; /* center items vertically, in this case */
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center; /* center items horizontally, in this case */
+  text-align: center;
+}
+
+.game-holder {
+  margin: 0 auto;
+  text-align: center;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+html.page-video_playing {
+  overflow: hidden;
+}
+
+.page-comic_active .game-holder,
+.page-video_playing .game-holder {
+  opacity: 0;
+}
+
+.page-comic-holder,
+.page-video_embed {
+  display: none;
+}
+
+.page-video_playing .page-video-full,
+.page-comic_active .page-comics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.page-video_playing .page-video_playing {
+  display: block;
+}
+
+.page-comic_active .page-comic_active {
+  display: block;
+}
+
+.page-video_playing .page-video-full video,
+.page-video_playing .page-video-full iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.page-comic li {
+  text-align: center;
+}
+
+.game-subtitle {
+  color: white;
+  font-family: @font-family;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  height: 30px;
+}
+
+.game-subtitle_active {
+  opacity: 1;
+}
+
+.page-comic li {
+  width: 100%;
+}
+
+.instructions {
+  margin-top: 2%;
+  width: 50%;
+  text-align: center;
+  color: white;
+  font-family: "Reenie Beanie", "Linux Libertine", "Georgia", "Times New Roman", "Times", "serif";
+  font-size: 23px;
+  line-height: 1.7;
+}
+
+.instructions_img {
+  width: 70%;
+}
